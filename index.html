@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Typescript Design Patterns</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+    <link rel="stylesheet" href="./node_modules/getmdl-select/getmdl-select.min.css">
+    <script defer src="./node_modules/getmdl-select/getmdl-select.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <script defer src="visitor/visitorPattern.js"></script>
+    <script defer src="runner.js"></script>
+</head>
+
+<body>
+    <div class="content">
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
+            <input class="mdl-textfield__input" id="pattern" name="pattern" value="Visitor" type="text" readonly tabIndex="-1" data-val="VisitorPattern" />
+            <label class="mdl-textfield__label" for="pattern">Pattern</label>
+            <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu" for="pattern">
+                <li class="mdl-menu__item" data-val="VisitorPattern">Visitor</li>
+                <li class="mdl-menu__item" data-val="Other">Other</li>
+            </ul>
+        </div>
+        <button id="runner" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Run</button>
+    </div>
+    <div class="terminal-wrp">
+        <div id="terminal" class="terminal"></div>
+    </div>
+</body>
+
+</html>

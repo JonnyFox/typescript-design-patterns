@@ -1,0 +1,28 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    color: #fff;
+    background-color: #333;
+}
+
+.content {
+    padding: 1rem;
+}
+
+.terminal-wrp {
+    display: flex;
+    justify-content: center;
+}
+
+.terminal-wrp .terminal {
+    font-family: monospace;
+    background-color: #222;
+    text-decoration: none;
+    width: 80%;
+    height: 50rem;
+    max-height: 50rem;
+    border: solid 1px #666;
+    padding: 1rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}

@@ -1,0 +1,28 @@
+{
+    "name": "typescript-design-patterns",
+    "version": "1.0.0",
+    "description": "Typescript design patterns implementations",
+    "main": "index.html",
+    "scripts": {
+        "start": "concurrently \"tsc -w\" \"light-server -s . -p 3000 -w **/*.js\"",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/JonnyFox/typescript-design-patterns.git"
+    },
+    "author": "Jonny Fox",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/JonnyFox/typescript-design-patterns/issues"
+    },
+    "homepage": "https://github.com/JonnyFox/typescript-design-patterns#readme",
+    "dependencies": {
+        "concurrently": "^3.5.0",
+        "getmdl-select": "^1.1.0",
+        "light-server": "^2.2.1",
+        "live-server": "^1.2.0",
+        "local-web-server": "^2.2.4",
+        "typescript": "^2.4.2"
+    }
+}
