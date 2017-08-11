@@ -5,7 +5,11 @@ interface IRunner {
 const terminal = <HTMLSelectElement>document.getElementById('terminal');
 const selectedPattern = <HTMLInputElement>document.getElementById('pattern');
 
-selectedPattern.onchange = (ev: Event) => terminal.innerHTML = '';
+selectedPattern.onchange = (ev: Event) => {
+    terminal.innerHTML = '';
+    let selectedValue = selectedPattern.getAttribute('data-val');
+    
+};
 
 document.getElementById('runner').onclick = () => {
 

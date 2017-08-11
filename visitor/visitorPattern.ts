@@ -10,14 +10,22 @@ interface IVisitor {
 
 class IncomeVisitor implements IVisitor {
     visit(item: Employee) {
-        item.income *= 1.1;
+        if (item instanceof Clerk) {
+            item.income *= 1.1;
+        } else { 
+            item.income *= 1.3;
+        }
         console.log(`${(<any>item.constructor).name} - ${item.name}'s new income: ${formatter.format(item.income)}`)
     }
 }
 
 class VacationVisitor implements IVisitor {
     visit(item: Employee) {
-        item.vactionDays += 3;
+        if (item instanceof Clerk) {
+            item.vactionDays += 1;
+        } else {
+            item.vactionDays += 3;
+        }
         console.log(`${(<any>item.constructor).name} - ${item.name}'s new vacation days: ${item.vactionDays}`)
     }
 }
@@ -27,11 +35,10 @@ interface IVisitableItem {
 }
 
 class Employee implements IVisitableItem {
-
     constructor(
         public name: string,
         public income: number = 10000,
-        public vactionDays: number = 20,
+        public vactionDays: number = 30,
     ) { }
 
     public accept(v: IVisitor) {
@@ -41,32 +48,30 @@ class Employee implements IVisitableItem {
 
 class Clerk extends Employee {
     constructor(name: string) {
-        super(name, 30000, 30);
+        super(name);
     }
 }
 
 class Employees implements IVisitableItem {
-
     constructor(
         public employees: Employee[] = []
     ) { }
 
     public accept(v: IVisitor) {
-        this.employees.forEach(e => v.visit(e));
+        this.employees.forEach(e => e.accept(v));
     }
 }
 
 class VisitorPattern implements IRunner {
     public run(): void {
-
         const list = new Employees([new Clerk('Alan'), new Employee('Tim'), new Employee('Zoe')]);
 
-        console.log('Accept Income Visitor');
+        console.log('Accept IncomeVisitor');
         list.accept(new IncomeVisitor());
 
         console.log('<br/>');
 
-        console.log('Accept Vacation Visitor');
+        console.log('Accept VacationVisitor');
         list.accept(new VacationVisitor());
     }
 }

@@ -1,8 +1,10 @@
+html,
 body {
     font-family: 'Roboto', sans-serif;
     font-weight: 100;
     color: #fff;
     background-color: #333;
+    height: 100%;
 }
 
 .content {
@@ -12,6 +14,7 @@ body {
 .terminal-wrp {
     display: flex;
     justify-content: center;
+    height: 85%;
 }
 
 .terminal-wrp .terminal {
@@ -19,10 +22,9 @@ body {
     background-color: #222;
     text-decoration: none;
     width: 80%;
-    height: 50rem;
-    max-height: 50rem;
+    height: 100%;
     border: solid 1px #666;
     padding: 1rem;
-    overflow-y: scroll;
+    overflow-y: auto;
     overflow-x: hidden;
 }
