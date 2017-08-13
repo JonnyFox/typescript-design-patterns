@@ -13,23 +13,16 @@
 
     <link rel="stylesheet" href="./node_modules/getmdl-select/getmdl-select.min.css">
     <script defer src="./node_modules/getmdl-select/getmdl-select.min.js"></script>
-    <link rel="stylesheet" href="style.css">
 
-    <script defer src="visitor/visitorPattern.js"></script>
-    <script defer src="visitor/visitorPattern2.js"></script>
-    <script defer src="runner.js"></script>
+    <script defer src="dist/bundle.js"></script>
 </head>
 
 <body>
     <div class="content">
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
-            <input class="mdl-textfield__input" id="pattern" name="pattern" value="Visitor" type="text" readonly tabIndex="-1" data-val="VisitorPattern" />
+            <input class="mdl-textfield__input" id="pattern" name="pattern" type="text" readonly tabIndex="-1" />
             <label class="mdl-textfield__label" for="pattern">Pattern</label>
-            <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu" for="pattern">
-                <li class="mdl-menu__item" data-val="VisitorPattern">Visitor</li>
-                <li class="mdl-menu__item" data-val="VisitorPattern2">Visitor2</li>
-                <li class="mdl-menu__item" data-val="Other">Other</li>
-            </ul>
+            <ul id="patternList" class="mdl-menu mdl-menu--bottom-left mdl-js-menu" for="pattern"></ul>
         </div>
         <button id="runner" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Run</button>
     </div>

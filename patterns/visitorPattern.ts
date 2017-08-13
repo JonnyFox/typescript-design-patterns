@@ -1,3 +1,5 @@
+import { IRunner } from '../runner';
+
 var formatter = new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: 'USD',
@@ -62,7 +64,7 @@ class Employees implements IVisitableItem {
     }
 }
 
-class VisitorPattern implements IRunner {
+export class VisitorPattern implements IRunner {
     public run(): void {
         const list = new Employees([new Clerk('Alan'), new Employee('Tim'), new Employee('Zoe')]);
 
