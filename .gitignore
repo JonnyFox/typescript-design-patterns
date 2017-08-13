@@ -1,6 +1,5 @@
 # compiled output
-*.js
-*.js.map
+/dist
 
 # dependencies
 /node_modules
