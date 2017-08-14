@@ -1,7 +1,7 @@
 import { SingletonPattern } from './patterns/creational/singleton';
 import { DecoratorPattern } from "./patterns/structural/decorator";
-import { VisitorPattern } from './patterns/behavioral/visitorPattern';
-import { VisitorPattern2 } from './patterns/behavioral/visitorPattern2';
+import { VisitorPattern } from './patterns/behavioral/visitor';
+import { VisitorPattern2 } from './patterns/behavioral/visitor2';
 import './style.scss';
 
 export interface IRunner {
