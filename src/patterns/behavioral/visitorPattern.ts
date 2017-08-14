@@ -68,12 +68,12 @@ export class VisitorPattern implements IRunner {
     public run(): void {
         const list = new Employees([new Clerk('Alan'), new Employee('Tim'), new Employee('Zoe')]);
 
-        console.log('Accept IncomeVisitor');
+        console.log('<span style="color: orange">Accept IncomeVisitor</span>');
         list.accept(new IncomeVisitor());
 
         console.log('<br/>');
 
-        console.log('Accept VacationVisitor');
+        console.log('<span style="color: orange">Accept VacationVisitor</span>');
         list.accept(new VacationVisitor());
     }
 }

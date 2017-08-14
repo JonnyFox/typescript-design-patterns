@@ -1,3 +1,5 @@
+import { SingletonPattern } from './patterns/creational/singleton';
+import { DecoratorPattern } from "./patterns/structural/decorator";
 import { VisitorPattern } from './patterns/behavioral/visitorPattern';
 import { VisitorPattern2 } from './patterns/behavioral/visitorPattern2';
 import './style.scss';
@@ -7,6 +9,8 @@ export interface IRunner {
 }
 
 enum Patterns { 
+    Singleton,
+    Decorator,
     Visitor,
     Visitor2
 }
@@ -38,6 +42,8 @@ document.getElementById('runner').onclick = () => {
     let runner: IRunner;
 
     switch (selectedPattern.value) {
+        case Patterns[Patterns.Singleton]: runner = new SingletonPattern(); break;
+        case Patterns[Patterns.Decorator]: runner = new DecoratorPattern(); break;
         case Patterns[Patterns.Visitor]: runner = new VisitorPattern(); break;
         case Patterns[Patterns.Visitor2]: runner = new VisitorPattern2(); break;
     }
