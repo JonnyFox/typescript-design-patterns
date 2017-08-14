@@ -1,5 +1,5 @@
-import { VisitorPattern } from './patterns/visitorPattern';
-import { VisitorPattern2 } from './patterns/visitorPattern2';
+import { VisitorPattern } from './patterns/behavioral/visitorPattern';
+import { VisitorPattern2 } from './patterns/behavioral/visitorPattern2';
 import './style.scss';
 
 export interface IRunner {

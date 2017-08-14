@@ -1,4 +1,4 @@
-import { IRunner } from '../runner';
+import { IRunner } from '../../runner';
 
 var formatter = new Intl.NumberFormat('en-US', {
     style: 'currency',

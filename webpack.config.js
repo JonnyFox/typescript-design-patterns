@@ -1,6 +1,6 @@
 module.exports = {
     devtool: 'inline-source-map',
-    entry: './runner.ts',
+    entry: './src/runner.ts',
     module: {
         rules: [{
                 test: /\.tsx?$/,
