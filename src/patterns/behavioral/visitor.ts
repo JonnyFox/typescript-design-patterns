@@ -17,7 +17,7 @@ class IncomeVisitor implements IVisitor {
         } else { 
             item.income *= 1.3;
         }
-        console.log(`${(<any>item.constructor).name} - ${item.name}'s new income: ${formatter.format(item.income)}`)
+        console.log(`${(<any>item.constructor).name} - ${item.name}'s new income: ${formatter.format(item.income)}`);
     }
 }
 
@@ -28,15 +28,15 @@ class VacationVisitor implements IVisitor {
         } else {
             item.vactionDays += 3;
         }
-        console.log(`${(<any>item.constructor).name} - ${item.name}'s new vacation days: ${item.vactionDays}`)
+        console.log(`${(<any>item.constructor).name} - ${item.name}'s new vacation days: ${item.vactionDays}`);
     }
 }
 
-interface IVisitableItem {
+interface IVisitable {
     accept(v: IVisitor);
 }
 
-class Employee implements IVisitableItem {
+class Employee implements IVisitable {
     constructor(
         public name: string,
         public income: number = 10000,
@@ -54,7 +54,7 @@ class Clerk extends Employee {
     }
 }
 
-class Employees implements IVisitableItem {
+class Employees implements IVisitable {
     constructor(
         public employees: Employee[] = []
     ) { }
