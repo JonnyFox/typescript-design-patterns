@@ -53,8 +53,9 @@ document.getElementById('runner').onclick = () => {
 
         console.log = (value: any) => log.push(typeof value === 'string' ? value : JSON.stringify(value));
 
-        console.log('<br/>');
         runner.run();
+
+        console.log('<hr/>');
 
         terminal.innerHTML += `<p>${log.join('<p></p>')}</p>`;
         terminal.scrollTop = terminal.scrollHeight;

@@ -17,14 +17,16 @@ class Rectangle implements Shape {
 }
 
 abstract class ShapeDecorator implements Shape {
-    constructor(protected decoratedShape) { }
+    constructor(protected decoratedShape: Shape) { }
 
-    abstract draw(): void;
+    public draw(): void { 
+        this.decoratedShape.draw();
+    };
 }
 
 class RedBorderDecorator extends ShapeDecorator {
     public draw(): void {
-        this.decoratedShape.draw();
+        super.draw();
         console.log('<span style="border: 1px solid red;">... with red border</span>');
     }
 }
