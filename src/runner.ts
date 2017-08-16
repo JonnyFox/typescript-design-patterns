@@ -55,7 +55,7 @@ document.getElementById('runner').onclick = () => {
 
         runner.run();
 
-        console.log('<hr/>');
+        console.log('<hr/><br/>');
 
         terminal.innerHTML += `<p>${log.join('<p></p>')}</p>`;
         terminal.scrollTop = terminal.scrollHeight;
