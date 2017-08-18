@@ -3,6 +3,7 @@ import { DecoratorPattern } from "./patterns/structural/decorator";
 import { VisitorPattern } from './patterns/behavioral/visitor';
 import { VisitorPattern2 } from './patterns/behavioral/visitor2';
 import './style.scss';
+import { StrategyPattern } from "./patterns/behavioral/strategy";
 
 export interface IRunner {
     run(): void;
@@ -10,7 +11,10 @@ export interface IRunner {
 
 enum Patterns { 
     Singleton,
+    
     Decorator,
+    
+    Strategy,
     Visitor,
     Visitor2
 }
@@ -44,6 +48,7 @@ document.getElementById('runner').onclick = () => {
     switch (selectedPattern.value) {
         case Patterns[Patterns.Singleton]: runner = new SingletonPattern(); break;
         case Patterns[Patterns.Decorator]: runner = new DecoratorPattern(); break;
+        case Patterns[Patterns.Strategy]: runner = new StrategyPattern(); break;
         case Patterns[Patterns.Visitor]: runner = new VisitorPattern(); break;
         case Patterns[Patterns.Visitor2]: runner = new VisitorPattern2(); break;
     }
